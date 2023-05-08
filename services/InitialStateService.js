@@ -23,12 +23,14 @@ import { appName } from '../../config.js';
 
 import { loadState } from '@nextcloud/initial-state';
 
-export const getInitialState = (section) => {
+export const getInitialState = (section, defaultValue) => {
   section = section || 'config';
   try {
     return loadState(appName, section);
   } catch (err) {
-    console.error('error in loadState("' + section + '"): ', err);
-    return null;
+    if (defaultValue === undefined) {
+      console.error('error in loadState("' + section + '"): ', err);
+    }
+    return defaultValue || null;
   }
 };
