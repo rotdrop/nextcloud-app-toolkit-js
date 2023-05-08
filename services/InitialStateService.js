@@ -28,6 +28,7 @@ export const getInitialState = (section) => {
   try {
     return loadState(appName, section);
   } catch (err) {
-    return console.error('error in loadState("' + section + '"): ', err);
+    console.error('error in loadState("' + section + '"): ', err);
+    return null;
   }
 };
