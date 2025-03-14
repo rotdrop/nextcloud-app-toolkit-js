@@ -59,6 +59,7 @@ declare module '@nextcloud/vue' {
   }
 
   const NcCounterBubble: Vue;
+  const NcDateTimePicker: Vue;
 
   const NcListItem: Vue & {
     forceDisplayActions: true,
@@ -114,6 +115,7 @@ declare module '@nextcloud/vue' {
     NcColorPicker,
     NcContent,
     NcCounterBubble,
+    NcDateTimePicker,
     NcEllipsisedOption,
     NcEmptyContent,
     NcListItem,
